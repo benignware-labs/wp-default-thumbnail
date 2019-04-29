@@ -13,7 +13,11 @@ add_action('admin_menu', function() {
         'empty' => 1,
         'service' => 'https://placeimg.com/%d/%d/any',
         'min_height' => 230,
-        'max_height' => 800
+        'max_height' => 800,
+        'environment' => array(
+          'development' => 1,
+          'production' => 0
+        )
       )
     ));
   } );
@@ -88,6 +92,22 @@ function default_thumbnail_settings_page() {
             </label>
           </div>
       </fieldset>
+
+      <fieldset>
+        <legend><h3>Environment</h3><legend>
+        <div>
+          <label>
+            <input type="checkbox" name="default_thumbnail_options[environment][development]" value="1" <?php checked( $options['environment']['development'], 1 ); ?>/>
+            <?= __('Development'); ?>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="default_thumbnail_options[environment][production]" value="1" <?php checked( $options['environment']['production'], 1 ); ?>/>
+            <?= __('Production'); ?>
+          </label>
+        </div>
+    </fieldset>
 
       <?php submit_button(); ?>
     </div>

@@ -19,6 +19,15 @@ require_once 'lib/settings.php';
 add_filter( 'post_thumbnail_html', function($html, $post_id = null, $post_thumbnail_id = null, $size = null, $attr = array()) {
   global $_wp_additional_image_sizes;
 
+  $hostname = $_SERVER['SERVER_NAME'];
+  $development_hosts = array(
+    'localhost',
+    '127.0.0.1',
+    '10.37.129.2',
+    '10.0.2.2'
+  );
+  $environment = in_array($hostname, $development_hosts) ? 'development' : 'production';
+
   $post_thumbnail_id = $post_thumbnail_id ?: get_post_thumbnail_id($post_id);
 
   $options = get_option('default_thumbnail_options');
@@ -85,6 +94,14 @@ add_filter( 'post_thumbnail_html', function($html, $post_id = null, $post_thumbn
   }
 
   if ($is_empty && !$options['empty']) {
+    return $html;
+  }
+
+  if ($environment === 'development' && !$options['environment']['development']) {
+    return $html;
+  }
+
+  if ($environment === 'production' && !$options['environment']['production']) {
     return $html;
   }
 
