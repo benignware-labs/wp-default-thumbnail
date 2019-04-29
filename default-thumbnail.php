@@ -1,10 +1,10 @@
 <?php
 
 /**
- Plugin Name: Default thumbnail
+ Plugin Name: Default Thumbnail
  Plugin URI: http://github.com/benignware/wp-default-thumbnail
- Description: Placeholder images
- Version: 0.0.1
+ Description: Show placeholder thumbnail
+ Version: 0.0.2
  Author: Rafael Nowrotek, Benignware
  Author URI: http://benignware.com
  License: MIT

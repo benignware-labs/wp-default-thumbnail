@@ -1,7 +1,6 @@
 # wp-default-thumbnail
 
-Placeholder images
-
+Show placeholder thumbnail
 
 ## Development
 

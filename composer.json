@@ -1,9 +1,9 @@
 {
   "name": "benignware/wp-default-thumbnail",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "Placeholder images",
+  "description": "Show placeholder thumbnail",
   "homepage": "http://github.com/benignware-labs/wp-sticky-widget-area",
   "authors": [
     {

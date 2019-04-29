@@ -3,7 +3,7 @@
 // Create custom plugin settings menu
 add_action('admin_menu', function() {
 	// Create new top-level menu
-	add_menu_page('Default Thumbnail Settings', 'Default thumbnail', 'administrator', __FILE__, 'default_thumbnail_settings_page' , 'dashicons-chart-pie' );
+	add_menu_page('Default Thumbnail Settings', 'Default Thumbnail', 'administrator', __FILE__, 'default_thumbnail_settings_page' , 'dashicons-chart-pie' );
 
 	// Call register settings function
 	add_action( 'admin_init', function() {
