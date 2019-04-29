@@ -28,7 +28,6 @@ services:
       - .:/var/www/html/wp-content/plugins/default-thumbnail
       - .uploads:/var/www/html/wp-content/uploads
     working_dir: /var/www/html
-
   wp:
     image: wordpress:cli
     user: '33:33'
