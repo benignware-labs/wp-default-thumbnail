@@ -32,7 +32,7 @@ add_filter( 'post_thumbnail_html', function($html, $post_id = null, $post_thumbn
 
   // Parameters
   $min_height = $options['min_height'] || 230;
-  $max_height = $options['max_height'] || 800;
+  $max_height = $options['max_height'] || 800;
 
   // Implementation
   $attr = is_array($attr) ? $attr : array();
