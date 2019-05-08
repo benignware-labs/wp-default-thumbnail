@@ -4,7 +4,7 @@
  Plugin Name: Default Thumbnail
  Plugin URI: http://github.com/benignware/wp-default-thumbnail
  Description: Show placeholder thumbnail
- Version: 0.0.2
+ Version: 0.0.3
  Author: Rafael Nowrotek, Benignware
  Author URI: http://benignware.com
  License: MIT
